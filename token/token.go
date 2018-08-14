@@ -30,8 +30,9 @@ const (
 	NOT_EQ = "!="
 
 	// Delimiters
-	COMMA     = ","
-	SEMICOLON = ";"
+	COMMA		= ","
+	SEMICOLON	= ";"
+	COLON		= ":"
 
 	LPAREN		= "("
 	RPAREN		= ")"
