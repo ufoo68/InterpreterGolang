@@ -102,7 +102,7 @@ ASTでは主に以下の2種類のノードを用いる
 
 let x = 5;  
 
-<LetStatement> <Identifier:x> = <Expression-<IntegerLiteral:5>>  
+(LetStatement) (Identifier:x) = (Expression-(IntegerLiteral:5))  
 
 ---  
 
