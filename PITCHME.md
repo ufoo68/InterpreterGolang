@@ -68,7 +68,7 @@ REPLという対話式実行環境を用いてソースコードを解析する�
 
 #### 例
 
->>>10 == 10  
+10 == 10  
 {Type:INTEGER Literal:10}
 {Type:EQ Literal:==}
 {Type:INTEGER Literal:10}
@@ -100,7 +100,7 @@ ASTでは主に以下の2種類のノードを用いる
 
 #### 例
 
->>>let x = 5;  
+let x = 5;  
   {Program}─{LetStatement}─{Identifier:x}
                           └{Expression}─{IntegerLiteral:5}
 
