@@ -8,7 +8,7 @@ O'reillyの本を読んで学んだこと
 
 +++  
 
-「WRITING AN INTERPRETER IN GO」という本の翻訳版  
+「WRITING AN INTERPRETER IN GO」の翻訳版  
 タイトルのとおり、実際にGO言語を用いてインタプリタを作成していく
 
 +++  
