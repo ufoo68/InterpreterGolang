@@ -69,9 +69,9 @@ REPLという対話式実行環境を用いてソースコードを解析する�
 #### 例
 
 10 == 10  
-{Type:INTEGER Literal:10}
-{Type:EQ Literal:==}
-{Type:INTEGER Literal:10}
+{Type:INTEGER Literal:10}  
+{Type:EQ Literal:==}  
+{Type:INTEGER Literal:10}  
 
 +++  
 
@@ -101,20 +101,22 @@ ASTでは主に以下の2種類のノードを用いる
 #### 例
 
 let x = 5;  
-- Program
--- LetStatement
---- Identifier:x
---- Expression 
----- IntegerLiteral:5
 
----
+<LetStatement> <Identifier:x> = <Expression-<IntegerLiteral:5>>  
 
 ### 評価
 
 +++
 
-
+構成したASTをもとに、プログラムの動作を定義する  
+「tree-walking型インタプリタ」をつくる  
+ufoo68の頭ではこの内容をうまく要約できないので、詳しくは本を読んでほしい  
 
 ---
 
 ### まとめ
+
+- 4章の構成で段階的にインタプリタを作成し、拡張していった
+- interfaceやメソッドなど(ufoo68にとっては)難しいgo言語の表現が多々あった
+- TTD(Table Test Driven)という手法を用いて機能の実装ごとにテストを行った
+- 何はともあれ、プログラミング言語をつくることの面倒くささがわかった
