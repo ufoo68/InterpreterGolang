@@ -101,8 +101,11 @@ ASTでは主に以下の2種類のノードを用いる
 #### 例
 
 let x = 5;  
-  {Program}─{LetStatement}─{Identifier:x}
-                          └{Expression}─{IntegerLiteral:5}
+- Program
+-- LetStatement
+--- Identifier:x
+--- Expression 
+---- IntegerLiteral:5
 
 ---
 
