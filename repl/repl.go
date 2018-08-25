@@ -53,6 +53,24 @@ func Start(in io.Reader, out io.Writer) {
 	}
 }
 
+func StartFile(bytes []byte, out io.Writer) {
+		line := string(bytes)
+		env := object.NewEnvironment()
+		l := lexer.New(line)
+		p := parser.New(l)
+
+		program := p.ParseProgram()
+		if len(p.Errors()) != 0 {
+			printParserErrors(out, p.Errors())
+			return
+		}
+		evaluated := evaluator.Eval(program, env)
+		if evaluated != nil {
+			io.WriteString(out, evaluated.Inspect())
+			io.WriteString(out, "\n")
+		}
+}
+
 func printParserErrors(out io.Writer, errors []string) {
 	io.WriteString(out, MONKEY_FACE)
 	io.WriteString(out, "Woops! We ran into some monkey business here!\n")
