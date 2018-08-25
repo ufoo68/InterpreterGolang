@@ -1,7 +1,7 @@
 package evaluator
 
 import (
-	"../object"
+	"monkey/object"
 	"fmt"
 )
 
